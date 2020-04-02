@@ -1,0 +1,17 @@
+{
+    "name": "kiora/universign-bundle",
+    "description": "A Bundle to use universign-service",
+    "type": "bundle",
+    "autoload": {
+        "psr-4": {
+            "Kiora\\UniversignBundle\\": ""
+        }
+    },
+    "require": {
+        "mh-ing/universign-service": "^0.1.7",
+        "symfony/http-kernel": "~4.2|~5.0",
+        "symfony/dependency-injection": "~4.2|~5.0",
+        "symfony/config": "~4.2|~5.0"
+    },
+    "license": "MIT"
+}

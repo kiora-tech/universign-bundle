@@ -1,0 +1,21 @@
+<?xml version="1.0" ?>
+<container xmlns="http://symfony.com/schema/dic/services"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+    <services>
+        <service id="phpxmlrpc.client" class="\PhpXmlRpc\Client" public="false">
+            <argument>%kiora_universign.path%</argument>
+            <call method="setCredentials">
+                <argument>%kiora_universign.user%</argument>
+                <argument>%kiora_universign.password%</argument>
+            </call>
+        </service>
+        <service id="PhpXmlRpc\Client" alias="phpxmlrpc.client" />
+
+        <service id="globalis.universign.requester" class="Globalis\Universign\Requester" public="true">
+            <argument>\PhpXmlRpc\Client</argument>
+        </service>
+        <service id="Globalis\Universign\Requester" alias="globalis.universign.requester" />
+
+    </services>
+</container>
