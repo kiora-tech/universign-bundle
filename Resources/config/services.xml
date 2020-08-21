@@ -13,7 +13,7 @@
         <service id="PhpXmlRpc\Client" alias="phpxmlrpc.client" />
 
         <service id="globalis.universign.requester" class="Globalis\Universign\Requester" public="true">
-            <argument>\PhpXmlRpc\Client</argument>
+            <argument id="phpxmlrpc.client" type="service"/>
         </service>
         <service id="Globalis\Universign\Requester" alias="globalis.universign.requester" />
 
