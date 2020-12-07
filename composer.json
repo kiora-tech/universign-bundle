@@ -8,7 +8,7 @@
         }
     },
     "require": {
-        "mh-ing/universign-service": "^0.1.7",
+        "kiora/universign-service": "^1.0.0",
         "symfony/http-kernel": "~4.2|~5.0",
         "symfony/dependency-injection": "~4.2|~5.0",
         "symfony/config": "~4.2|~5.0"
